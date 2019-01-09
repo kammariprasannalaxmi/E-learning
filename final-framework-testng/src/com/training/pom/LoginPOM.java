@@ -22,6 +22,13 @@ public class LoginPOM {
 	@FindBy(id="formLogin_submitAuth")
 	private WebElement loginBtn; 
 	
+	@FindBy(xpath="/html/body/div[1]/nav/div/div[2]/ul[2]/li[2]/a/img")
+	private WebElement userDropDown;
+	
+	@FindBy(id="logout_button")
+	private WebElement logOutBtn;
+	
+	
 	public void sendUserName(String userName) {
 		this.userName.clear();
 		this.userName.sendKeys(userName);
@@ -35,4 +42,13 @@ public class LoginPOM {
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
 	}
+	
+	public void clickuserDropdown() {
+		this.userDropDown.click();
+	}
+	
+	public void clicklogOutBtn() {
+		this.logOutBtn.click();
+	}
+	
 }
